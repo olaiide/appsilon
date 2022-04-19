@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
 import Picture from "../../assets/picture.svg";
+import Logout from "../../assets/logout.svg"
 import {
   SidebarContainer,
   Sidebar,
@@ -15,9 +16,13 @@ import {
 import { SideBarData } from "./SideBarData";
 
 const SideBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const openMobileMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <SidebarContainer>
-      <Sidebar>
+      <Sidebar click={isOpen}>
         <Logo>
           <img src={logo} alt='logo' />
           <h3>Insurance Portal</h3>
@@ -34,9 +39,9 @@ const SideBar = () => {
           <Button>Create New Plan +</Button>{" "}
         </ButtonWrapper>
         <SideBarItems>
-          {SideBarData.map((item, index) => (
-            <SidebarLists key={index} title={item.title}>
-              <SidebarList>
+          {SideBarData.map((item) => (
+            <SidebarLists key={item.id} title={item.title}>
+              <SidebarList title={item.title}>
                 <div>
                   <img src={item.icon} alt='icon' />
                 </div>
@@ -44,6 +49,11 @@ const SideBar = () => {
               </SidebarList>
             </SidebarLists>
           ))}
+          <SidebarList>
+           <div><img src={Logout} alt="logout icon"/></div>
+
+           <p>Logout</p>
+          </SidebarList>
         </SideBarItems>
       </Sidebar>
     </SidebarContainer>

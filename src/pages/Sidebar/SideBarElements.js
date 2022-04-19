@@ -30,7 +30,11 @@ export const Logo = styled.div`
 export const Content = styled.div`
   margin: 0 auto;
   text-align: center;
-  font-family: "Segoe UI";
+  font-family: Segoe UI;
+  height : 150px;
+  img {
+    position : relative;
+  }
   h3 {
     font-family: Segoe UI;
     font-size: 16px;
@@ -38,6 +42,7 @@ export const Content = styled.div`
     line-height: 21px;
     letter-spacing: 0em;
     color: #888cb7;
+    margin-top : 0;
   }
   .welcome {
     font-family: Segoe UI;
@@ -46,6 +51,8 @@ export const Content = styled.div`
     line-height: 13px;
     letter-spacing: 0em;
     color: #888cb7;
+    position : relative;
+    bottom : 10px;
   }
   .plan {
     font-family: Segoe UI;
@@ -54,6 +61,9 @@ export const Content = styled.div`
     line-height: 19px;
     letter-spacing: 0em;
     color: #888cb7;
+    position : relative;
+    bottom : 15px;
+    margin-top : 0;
   }
   span {
     color: rgba(51, 214, 159, 1);
@@ -81,6 +91,12 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+  padding-bottom : 0.5rem;
+`;
+export const SideBarItems = styled.div``;
+
+export const SidebarLists = styled.div`
+  margin: 0 auto;
 `;
 
 export const SidebarList = styled.div`
@@ -101,11 +117,11 @@ export const SidebarList = styled.div`
     font-weight: 400;
     letter-spacing: 0em;
     color: #a2a4b9;
+    ${(props) =>
+    props.title === "Reports" &&
+    css`
+      color: #713BDB;
+    `}
   }
 `;
 
-export const SideBarItems = styled.div``;
-
-export const SidebarLists = styled.div`
-  margin: 0 auto;
-`;

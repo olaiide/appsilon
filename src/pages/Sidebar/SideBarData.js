@@ -1,11 +1,9 @@
 import company from "../../assets/company.svg";
 import history from "../../assets/history.svg";
 import overview from "../../assets/overview.svg";
-import picture from "../../assets/picture.svg";
 import policy from "../../assets/policy.svg";
 import reports from "../../assets/reports.svg";
 import user from "../../assets/user.svg";
-import logout from "../../assets/logout.svg";
 
 export const SideBarData = [
     {
