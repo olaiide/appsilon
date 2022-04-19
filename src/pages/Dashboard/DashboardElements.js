@@ -21,4 +21,11 @@ export const ContentWrapper = styled.div`
 width : 92%;
 //background-color : red;
 margin : 0 auto;
+
+`
+export const CardGrid = styled.div`
+display : grid;
+grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
+column-gap : 20px;
+row-gap : 30px;
 `

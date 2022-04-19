@@ -1,26 +1,23 @@
 import styled, { css } from "styled-components";
 
 export const SidebarContainer = styled.div`
-  //width : 15%;
-  // margin-top : 3rem;
   overflow: hidden;
 `;
 
 export const Sidebar = styled.div`
   width: 25%;
-  //max-width : 400px;
   min-height: 100vh;
   box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.05);
-  position : fixed;
-  left : 0;
-  top : 0;
+  position: fixed;
+  left: 0;
+  top: 0;
 `;
 
 export const Logo = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
-  padding-top : 3rem;
+  padding-top: 1rem;
   h3 {
     padding: 0 12px;
     font-family: Segoe UI;
@@ -40,7 +37,7 @@ export const Content = styled.div`
     font-weight: 700;
     line-height: 21px;
     letter-spacing: 0em;
-    color : #888CB7;
+    color: #888cb7;
   }
   .welcome {
     font-family: Segoe UI;
@@ -48,7 +45,7 @@ export const Content = styled.div`
     font-weight: 400;
     line-height: 13px;
     letter-spacing: 0em;
-    color : #888CB7;
+    color: #888cb7;
   }
   .plan {
     font-family: Segoe UI;
@@ -56,10 +53,10 @@ export const Content = styled.div`
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
-    color : #888CB7;
+    color: #888cb7;
   }
   span {
-      color : rgba(51, 214, 159, 1);
+    color: rgba(51, 214, 159, 1);
   }
 `;
 export const Button = styled.button`
@@ -83,66 +80,32 @@ export const Button = styled.button`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top : 2rem;
+  margin-top: 1rem;
 `;
 
-export const SideBarItems = styled.div`
-  /* list-style: none;
-  transition: width 0.5s;
-  background-color: red;
-  margin-top: 7rem; */
-  /* width: 15%;
-  transition: width 0.5s;
-  min-height: 100vh;
-  background-color: #fff;
-  //position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 99;
-  overflow: hidden;
-  margin-top: 0rem; */
-`
 export const SidebarList = styled.div`
-/* margin : 0 auto;
-display : flex;
-//justify-content : center;
-background-color : green;
-//padding : 20px;
-width : 100% !important; */
-flex: 70%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 17px;
-  letter-spacing: 0em;
-`
+  width: 40%;
+  margin: 0 auto;
+  cursor: pointer;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  p {
+    padding: 2px 8px;
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #a2a4b9;
+  }
+`;
 
-export const SidebarListIcon = styled.div`
-/* display : flex;
-justify-content : center;
-flex-direction : column; */
-flex: 30%;
-  display: grid;
-  place-items: center;
-`
+export const SideBarItems = styled.div``;
 
-export const SidebarListTitle = styled.div`
-/* display : flex;
-justify-content : center;
-flex-direction : column; */
-flex: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px;
-  font-family: Montserrat;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 17px;
-`
+export const SidebarLists = styled.div`
+  margin: 0 auto;
+`;

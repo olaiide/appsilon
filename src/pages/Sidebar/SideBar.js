@@ -10,10 +10,10 @@ import {
   ButtonWrapper,
   SideBarItems,
   SidebarList,
-  SidebarListIcon,
-  SidebarListTitle
+  SidebarLists,
 } from "./SideBarElements";
 import { SideBarData } from "./SideBarData";
+
 const SideBar = () => {
   return (
     <SidebarContainer>
@@ -25,20 +25,24 @@ const SideBar = () => {
         <Content>
           <img src={Picture} alt='young woman' />
           <h3>Hello ! Rusalba Ruiz</h3>
-          <p className="welcome">Welcome Back To Your Insurance Portal</p>
-          <p className="plan">Your Plan : <span>Free</span></p>
+          <p className='welcome'>Welcome Back To Your Insurance Portal</p>
+          <p className='plan'>
+            Your Plan : <span>Free</span>
+          </p>
         </Content>
         <ButtonWrapper>
-          <Button>Create New Plan +</Button>
+          <Button>Create New Plan +</Button>{" "}
         </ButtonWrapper>
         <SideBarItems>
-        {SideBarData.map((item, index) => (
-            <SidebarList key={index} title={item.title}>
-              <SidebarListIcon>
-                <img src={item.icon} alt='icon' />
-              </SidebarListIcon>
-              <SidebarListTitle>{item.title}</SidebarListTitle>
-            </SidebarList>
+          {SideBarData.map((item, index) => (
+            <SidebarLists key={index} title={item.title}>
+              <SidebarList>
+                <div>
+                  <img src={item.icon} alt='icon' />
+                </div>
+                <p>{item.title}</p>
+              </SidebarList>
+            </SidebarLists>
           ))}
         </SideBarItems>
       </Sidebar>
