@@ -59,7 +59,7 @@ const SideBar = () => {
                 <div className="icon">
                   <img src={logout} alt='logout icon' />
                 </div>
-                <p className="logout">Logout</p>
+                <p className="logout">Log Out</p>
               </SidebarList>
             </Logout>
           </SideBarItems>

@@ -123,7 +123,7 @@ export const SidebarList = styled.div`
     padding-left: 5px;
     font-family: Segoe UI;
     font-weight: 400;
-    font-size : 15px;
+    font-size : 13px;
     letter-spacing: 0em;
     color: #a2a4b9;
   }
@@ -146,7 +146,7 @@ export const Title = styled.p`
 `
 export const Logout = styled.div`
   margin-top: 5.4rem;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
 `;
 export const MobileTopBar = styled.div`
   display: none;
