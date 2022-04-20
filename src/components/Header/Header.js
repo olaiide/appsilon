@@ -27,13 +27,13 @@ const List = styled.ul`
     margin-right : 4rem;
   }
   .line {
-    width: 16px;
+    width: 14px;
     height: 2px;
     color: #713bdb;
     background-color: #713bdb;
     position: absolute;
     bottom: 12px;
-    left: 20px;
+    left: 16px;
   }
   @media screen and (max-width : 768px) {
     width : 80%;

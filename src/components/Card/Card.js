@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 240px;
+  height: 230px;
   background: #ffffff;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.06);
 `;
@@ -16,7 +16,7 @@ const Content = styled.div`
     height: 100px;
     background-color: red;
     h3 {
-      font-size: 60px;
+      font-size: 40px;
     }
   }
   .progress {
@@ -42,7 +42,7 @@ const Content = styled.div`
   .policy,
   .claim {
     font-family: Segoe UI;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 23px;
     letter-spacing: 0em;
@@ -50,7 +50,7 @@ const Content = styled.div`
   }
   .amount__ {
     font-family: Segoe UI;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 29px;
     letter-spacing: 0em;

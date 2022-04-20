@@ -11,11 +11,10 @@ import {
   ButtonWrapper,
   SideBarItems,
   SidebarList,
-  SidebarLists,
+  Title,
   Logout,
   MobileLogo,
   MobileTopBar,
-  Bars,
 } from "./SideBarElements";
 import "./MobileSideBar.css";
 import { SideBarData } from "./SideBarData";
@@ -48,36 +47,38 @@ const SideBar = () => {
           </ButtonWrapper>
           <SideBarItems>
             {SideBarData.map((item) => (
-              <SidebarLists key={item.id} title={item.title}>
-                <SidebarList title={item.title}>
-                  <div>
-                    <img src={item.icon} alt='icon' />
-                  </div>
-                  <p>{item.title}</p>
-                </SidebarList>
-              </SidebarLists>
+              <SidebarList title={item.title} key={item.id}>
+                <div className='icon'>
+                  <img src={item.icon} alt='icon' />
+                </div>
+                <Title title={item.title}>{item.title}</Title>
+              </SidebarList>
             ))}
             <Logout>
-            <SidebarList>
-              <div>
-                <img src={logout} alt='logout icon' />
-              </div>
-
-              <p>Logout</p>
-            </SidebarList>
+              <SidebarList>
+                <div className="icon">
+                  <img src={logout} alt='logout icon' />
+                </div>
+                <p style={{fontSize : '15px'}}>Logout</p>
+              </SidebarList>
             </Logout>
           </SideBarItems>
         </Sidebar>
       </SidebarContainer>
       <MobileTopBar click={isOpen}>
-        <MobileLogo>  <img src={logo} alt=' logo' /></MobileLogo>
-          <div
-            className={isOpen ? "menu_btn menu_btn_line" : "menu_btn menu_btn_open"}
-            onClick={openMobileMenu}
-          >
-            <div className="menu_btn_line"></div>
-            <div className="menu_btn_line"></div>
-          </div>
+        <MobileLogo>
+          {" "}
+          <img src={logo} alt=' logo' />
+        </MobileLogo>
+        <div
+          className={
+            isOpen ? "menu_btn menu_btn_line" : "menu_btn menu_btn_open"
+          }
+          onClick={openMobileMenu}
+        >
+          <div className='menu_btn_line'></div>
+          <div className='menu_btn_line'></div>
+        </div>
       </MobileTopBar>
     </>
   );

@@ -5,7 +5,7 @@ export const SidebarContainer = styled.div`
 `;
 
 export const Sidebar = styled.div`
-  width: 25%;
+  width: 20%;
   min-height: 100vh;
   box-shadow: 10px 3px 15px rgba(0, 0, 0, 0.05);
   position: fixed;
@@ -31,7 +31,7 @@ export const Logo = styled.div`
   h3 {
     padding: 0 12px;
     font-family: Segoe UI;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 21px;
     letter-spacing: 0em;
@@ -47,7 +47,7 @@ export const Content = styled.div`
   }
   h3 {
     font-family: Segoe UI;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 21px;
     letter-spacing: 0em;
@@ -56,7 +56,7 @@ export const Content = styled.div`
   }
   .welcome {
     font-family: Segoe UI;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
     line-height: 13px;
     letter-spacing: 0em;
@@ -66,7 +66,7 @@ export const Content = styled.div`
   }
   .plan {
     font-family: Segoe UI;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 19px;
     letter-spacing: 0em;
@@ -94,52 +94,64 @@ export const Button = styled.button`
   outline: none;
   border: none;
   border-radius: 7px;
-  height: 35px;
-  width: 168px;
+  height: 32px;
+  width: 148px;
 `;
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   padding-bottom: 0.5rem;
 `;
 export const SideBarItems = styled.div``;
 
-export const SidebarLists = styled.div`
-  margin: 0 auto;
-`;
-
 export const SidebarList = styled.div`
   display: flex;
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
-  cursor: pointer;
-  div {
+
+  .icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+  }
+  p {
+    flex: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  p {
-    padding: 2px 8px;
-    text-align: center;
-    font-family: Segoe UI;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0em;
-    color: #a2a4b9;
+    padding-left: 5px;
     ${(props) =>
       props.title === "Reports" &&
       css`
         color: #713bdb;
       `}
-  }
-  @media screen and (max-width : 768px) {
-      width : 60%;
+    font-family: Segoe UI;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #a2a4b9;
   }
 `;
-export const Logout = styled.div`
-margin-top : 1rem;
+export const Title = styled.p`
+  flex: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    font-family: Segoe UI;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #a2a4b9;
+    ${(props) =>
+    props.title === "Reports" &&
+    css`
+      color: #713BDB !important;
+    `}
 `
+export const Logout = styled.div`
+  margin-top: 7rem;
+  margin-left: 1rem;
+`;
 export const MobileTopBar = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
@@ -150,62 +162,7 @@ export const MobileTopBar = styled.div`
     margin: 0 auto;
     padding: 23px 13px 10px 13px;
     width: 92%;
+  }
+`;
 
-  }
-.menu_btn.menu_btn_open {
-  min-height: 25px;
-  cursor : pointer;
-}
-.menu_btn.menu_btn_open .menu_btn_line {
-  width: 25px;
-  transition: width 0.2s linear;
-  background-color: #64ffda;
-}
-.menu_btn_line :nth-child(1) {
-  transform: rotate(45deg) translateY(7px);
-  position: relative;
-  top: 1px;
-  transition: transform 0.2s linear;
-  background-color: #66ffda;
-}
-.menu_btn_line :nth-child(2) {
-  transform: rotate(-45deg) translateY(-7px);
-  transition: transform 0.2s linear;
-  background-color: #64ffda;
-}
-`;
-export const Bars = styled.button`
-  width: 27px;
-  height : 2px;
-  cursor: pointer;
-  color: black;
-  min-height: 25px;
-  outline: none;
-  border: none;
-  background-color: white;
-  .line__1 {
-    width: 27px;
-    margin: 7px 0;
-    height: 1px;
-    color: white;
-    background: black;
-    margin: 8px 0;
-    transform: ${(props) =>
-      props.click ? "rotate(45deg) translateY(7px)" : null};
-    position: relative;
-    top: 1px;
-    transition: transform 0.2s linear;
-  }
-  .line__2 {
-    height: 1px;
-    width: 27px;
-    margin: 7px 0;
-    color: white;
-    background: black;
-    margin: 8px 0;
-    transform: ${(props) =>
-      props.click ? "rotate(-45deg) translateY(7px)" : null};
-    transition: transform 0.2s linear;
-  }
-`;
 export const MobileLogo = styled.div``;
