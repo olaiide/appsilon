@@ -11,6 +11,16 @@ export const Sidebar = styled.div`
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 99;
+  @media screen and (max-width: 768px) {
+    left: ${(props) => (props.click ? "0" : "-110%")} !important;
+    width: 250px !important;
+    transition: ${(props) =>
+      props.click ? " all 0.7s ease" : "all 0.7s ease"};
+    overflow-x: auto;
+    height: 100%;
+    background-color: white;
+  }
 `;
 
 export const Logo = styled.div`
@@ -31,9 +41,9 @@ export const Content = styled.div`
   margin: 0 auto;
   text-align: center;
   font-family: Segoe UI;
-  height : 150px;
+  height: 150px;
   img {
-    position : relative;
+    position: relative;
   }
   h3 {
     font-family: Segoe UI;
@@ -42,7 +52,7 @@ export const Content = styled.div`
     line-height: 21px;
     letter-spacing: 0em;
     color: #888cb7;
-    margin-top : 0;
+    margin-top: 0;
   }
   .welcome {
     font-family: Segoe UI;
@@ -51,8 +61,8 @@ export const Content = styled.div`
     line-height: 13px;
     letter-spacing: 0em;
     color: #888cb7;
-    position : relative;
-    bottom : 10px;
+    position: relative;
+    bottom: 10px;
   }
   .plan {
     font-family: Segoe UI;
@@ -61,9 +71,9 @@ export const Content = styled.div`
     line-height: 19px;
     letter-spacing: 0em;
     color: #888cb7;
-    position : relative;
-    bottom : 15px;
-    margin-top : 0;
+    position: relative;
+    bottom: 15px;
+    margin-top: 0;
   }
   span {
     color: rgba(51, 214, 159, 1);
@@ -71,14 +81,14 @@ export const Content = styled.div`
 `;
 export const Button = styled.button`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: #713bdb;
   color: #fffbfb;
-  font-family: "Segoe UI";
+  font-family: Segoe UI;
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 19px;
   cursor: pointer;
   outline: none;
@@ -91,7 +101,7 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  padding-bottom : 0.5rem;
+  padding-bottom: 0.5rem;
 `;
 export const SideBarItems = styled.div``;
 
@@ -118,10 +128,84 @@ export const SidebarList = styled.div`
     letter-spacing: 0em;
     color: #a2a4b9;
     ${(props) =>
-    props.title === "Reports" &&
-    css`
-      color: #713BDB;
-    `}
+      props.title === "Reports" &&
+      css`
+        color: #713bdb;
+      `}
+  }
+  @media screen and (max-width : 768px) {
+      width : 60%;
   }
 `;
+export const Logout = styled.div`
+margin-top : 1rem;
+`
+export const MobileTopBar = styled.div`
+  display: none;
+  @media screen and (max-width: 768px) {
+    color: black;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 23px 13px 10px 13px;
+    width: 92%;
 
+  }
+.menu_btn.menu_btn_open {
+  min-height: 25px;
+  cursor : pointer;
+}
+.menu_btn.menu_btn_open .menu_btn_line {
+  width: 25px;
+  transition: width 0.2s linear;
+  background-color: #64ffda;
+}
+.menu_btn_line :nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+  position: relative;
+  top: 1px;
+  transition: transform 0.2s linear;
+  background-color: #66ffda;
+}
+.menu_btn_line :nth-child(2) {
+  transform: rotate(-45deg) translateY(-7px);
+  transition: transform 0.2s linear;
+  background-color: #64ffda;
+}
+`;
+export const Bars = styled.button`
+  width: 27px;
+  height : 2px;
+  cursor: pointer;
+  color: black;
+  min-height: 25px;
+  outline: none;
+  border: none;
+  background-color: white;
+  .line__1 {
+    width: 27px;
+    margin: 7px 0;
+    height: 1px;
+    color: white;
+    background: black;
+    margin: 8px 0;
+    transform: ${(props) =>
+      props.click ? "rotate(45deg) translateY(7px)" : null};
+    position: relative;
+    top: 1px;
+    transition: transform 0.2s linear;
+  }
+  .line__2 {
+    height: 1px;
+    width: 27px;
+    margin: 7px 0;
+    color: white;
+    background: black;
+    margin: 8px 0;
+    transform: ${(props) =>
+      props.click ? "rotate(-45deg) translateY(7px)" : null};
+    transition: transform 0.2s linear;
+  }
+`;
+export const MobileLogo = styled.div``;

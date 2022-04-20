@@ -5,32 +5,13 @@ import {
   Container,
   Wrapper,
   ContentWrapper,
+  Hero,
   CardGrid,
 } from "./DashboardElements";
-import s from "../../assets/s.svg";
+import image1 from "../../assets/heroImage1.svg";
+import { Data } from "./DashboardData";
 import Card from "../../components/Card/Card";
 const Dashboard = () => {
-  const Data = [
-    {
-        id : 1,
-      firstAmount: "1000",
-      secondAmount: "400",
-      thirdAmount: "800",
-
-    },
-    {
-        id : 1,
-      firstAmount: "2500",
-      secondAmount: "1100",
-      thirdAmount: "1400",
-    },
-    {
-        id : 3,
-      firstAmount: "2500",
-      secondAmount: "1100",
-      thirdAmount: "1400",
-    },
-  ];
   return (
     <>
       <SideBar />
@@ -38,12 +19,10 @@ const Dashboard = () => {
         <Header />
         <Wrapper>
           <ContentWrapper>
-            <img
-              src={s}
-              style={{ height: "auto", maxWidth: "100%" }}
-              alt='dd'
-            />
-            <CardGrid>
+            <Hero>
+             <img src={image1}  alt="img"/>
+            </Hero>
+            { <CardGrid>
               {Data.map((item) => (
                 <Card
                   key={item.id}
@@ -52,7 +31,7 @@ const Dashboard = () => {
                   thirdAmount={item.thirdAmount}
                 />
               ))}
-            </CardGrid>
+            </CardGrid> }
           </ContentWrapper>
         </Wrapper>
       </Container>

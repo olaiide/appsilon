@@ -1,51 +1,62 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 const Container = styled.div`
-//background-color : red;
-//height : 80px;
-overflow : hidden;
-//margin-left : 25%;
-/* box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
-border-radius: 0px 20px 0px 0px; */
-`
+  overflow: hidden;
+`;
 const List = styled.ul`
-list-style-type : none;
-display : flex;
-justify-content : space-between;
-width : 250px;
-height : 50px;
-
-li {
-  font-family: Segoe UI;
-font-size: 16px;
-font-weight: 400;
-line-height: 21px;
-letter-spacing: 0em;
-
-}
-li:last-child{
-  color : #713BDB;
-}
-span {
-  width : 16px;
-  height : 2px;
-  color : #713BDB;
-  background-color : #713BDB;
-}
-//background-color : green;
- 
-`
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 270px;
+ li {
+    font-family : 'Segoe';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    position: relative;
+    cursor : pointer;
+    color : #42474A;
+    @media screen and (max-width : 768px) {
+      margin : 0 auto;
+      text-align : center;
+    }
+  }
+  li:last-child {
+    color: #713bdb;
+    margin-right : 4rem;
+  }
+  .line {
+    width: 16px;
+    height: 2px;
+    color: #713bdb;
+    background-color: #713bdb;
+    position: absolute;
+    bottom: 7px;
+    left: 20px;
+  }
+  @media screen and (max-width : 768px) {
+    width : 80%;
+    margin : 0 auto;
+  }
+`;
 const Header = () => {
   return (
     <Container>
-     <List>
-         <li><p>Overview</p></li>
-         <li><p>Policy</p></li>
-         <li><p>Reports</p><span></span></li>
-         
-     </List>
+      <List>
+        <li>
+          <p>Overview</p>
+        </li>
+        <li>
+          <p>Policy</p>
+        </li>
+        <li>
+          <p>Reports</p>
+          <div className="line"> </div>
+        </li>
+      </List>
     </Container>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

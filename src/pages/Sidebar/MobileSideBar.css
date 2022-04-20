@@ -1,0 +1,37 @@
+.menu_btn_line {
+    height: 0.22rem;
+    width: 27px;
+    margin : 7px 0;
+    color: black;
+  }
+  .menu_btn {
+    display: none;
+  }
+  .menu_btn.menu_btn_open {
+    min-height: 25px;
+    cursor : pointer;
+  }
+  .menu_btn.menu_btn_open .menu_btn_line {
+    width: 25px;
+    transition: width 0.2s linear;
+    background-color: black !important;
+  }
+  .menu_btn_line :nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+    position: relative;
+    top: 1px;
+    transition: transform 0.2s linear;
+    background-color: black  !important;
+  }
+  .menu_btn_line :nth-child(2) {
+    transform: rotate(-45deg) translateY(-7px);
+    transition: transform 0.2s linear;
+    background-color:  black !important;
+  }
+
+  .menu_btn {
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    margin: 0px 20px;
+  }

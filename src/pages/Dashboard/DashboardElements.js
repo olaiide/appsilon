@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
- // min-height: 100vh;
-  //background-color: #F4F5F9;
   margin-left: 25%;
   overflow: hidden;
   @media screen and (max-width : 768px){
@@ -18,14 +16,22 @@ export const Wrapper = styled.div`
   min-height : 100vh;
 `;
 export const ContentWrapper = styled.div`
-width : 92%;
-//background-color : red;
-margin : 0 auto;
-
+width : 80%;
+margin-left : 2rem;
+@media screen and (max-width: 768px) {
+  width : 93%;
+  margin : 0 auto;
+}
+`
+export const Hero = styled.div`
+  margin-top : 1rem;
+  height : 300px;
+  padding-bottom : 3rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
 `
 export const CardGrid = styled.div`
 display : grid;
-grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
-column-gap : 20px;
-row-gap : 30px;
+grid-template-columns : repeat(auto-fit, minmax(230px, 1fr));
+gap : 12px;
+margin-top : 1rem;
 `

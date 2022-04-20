@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 270px;
-  background-color: white;
+  height: 240px;
   background: #ffffff;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.06);
 `;
@@ -90,8 +89,9 @@ const FirstContent = styled.div`
     top: 26px;
   }
   .dollar {
-    position: absolute;
-    bottom: 10px;
+    position: relative;
+    bottom: 20px;
+    right : 13px;
     color: rgba(113, 59, 219, 1);
     font-size: 25px;
     padding: 3px;
