@@ -7,7 +7,7 @@ export const Data = [
 
     },
     {
-        id : 1,
+        id : 2,
       firstAmount: "2500",
       secondAmount: "1100",
       thirdAmount: "1400",

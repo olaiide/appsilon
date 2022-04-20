@@ -100,8 +100,8 @@ export const Button = styled.button`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 1.4rem;
-  padding-bottom: 0.5rem;
+  margin-top: 1.6rem;
+  padding-bottom: 1rem;
 `;
 export const SideBarItems = styled.div``;
 
@@ -109,31 +109,27 @@ export const SidebarList = styled.div`
   display: flex;
   width: 60%;
   margin: 0 auto;
-
+  cursor: pointer;
   .icon {
     flex: 30%;
     display: grid;
     place-items: center;
   }
-  p {
+  .logout{
     flex: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 5px;
-    ${(props) =>
-      props.title === "Reports" &&
-      css`
-        color: #713bdb;
-      `}
     font-family: Segoe UI;
     font-weight: 400;
+    font-size : 15px;
     letter-spacing: 0em;
     color: #a2a4b9;
   }
 `;
 export const Title = styled.p`
-  flex: 70%;
+    flex: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,8 +145,8 @@ export const Title = styled.p`
     `}
 `
 export const Logout = styled.div`
-  margin-top: 7rem;
-  margin-left: 1rem;
+  margin-top: 5.4rem;
+  margin-left: 0.5rem;
 `;
 export const MobileTopBar = styled.div`
   display: none;

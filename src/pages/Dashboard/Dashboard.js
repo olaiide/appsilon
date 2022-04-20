@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Header from "../../components/Header/Header";
 import SideBar from "../../components/Sidebar/SideBar";
 import {
@@ -13,7 +13,7 @@ import Card from "../../components/Card/Card";
 import insurance from "../../assets/header-image.png";
 const Dashboard = () => {
   return (
-    <>
+    <Fragment>
       <SideBar />
       <Container>
         <Header />
@@ -46,7 +46,7 @@ const Dashboard = () => {
           </ContentWrapper>
         </Wrapper>
       </Container>
-    </>
+    </Fragment>
   );
 };
 
