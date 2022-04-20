@@ -1,5 +1,5 @@
 .menu_btn_line {
-    height: 0.22rem;
+    height: 1px;
     width: 27px;
     margin : 7px 0;
     color: black;
@@ -33,5 +33,5 @@
     display: block;
     height: 30px;
     cursor: pointer;
-    margin: 0px 20px;
+    margin : 0 5px;
   }

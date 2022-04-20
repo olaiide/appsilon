@@ -9,7 +9,7 @@ const List = styled.ul`
   justify-content: space-around;
   width: 270px;
  li {
-    font-family : 'Segoe';
+    font-family : Segoe UI;
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
@@ -32,7 +32,7 @@ const List = styled.ul`
     color: #713bdb;
     background-color: #713bdb;
     position: absolute;
-    bottom: 7px;
+    bottom: 12px;
     left: 20px;
   }
   @media screen and (max-width : 768px) {

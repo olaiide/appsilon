@@ -19,7 +19,7 @@ export const ContentWrapper = styled.div`
 width : 80%;
 margin-left : 2rem;
 @media screen and (max-width: 768px) {
-  width : 93%;
+  width : 90%;
   margin : 0 auto;
 }
 `

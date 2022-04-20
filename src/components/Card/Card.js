@@ -25,7 +25,7 @@ const Content = styled.div`
   }
   .progress__policy__bar {
     height: 4px;
-    width: 40%;
+    width: 35%;
     color: #fff !important;
     background-color: rgba(38, 88, 89, 1);
     background-color: rgba(51, 214, 159, 1);
@@ -33,7 +33,7 @@ const Content = styled.div`
   }
   .progress__claim__bar {
     height: 4px;
-    width: 85%;
+    width: 80%;
     color: #fff !important;
     background-color: rgba(113, 59, 219, 1);
     border-radius: 2px;
